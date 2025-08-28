@@ -23,11 +23,6 @@
               {{- end -}}
             </div>
 
-            {{- if .Site.Params.displayPoweredBy }}
-                {{- $raw := `Powered by [Hugo](https://github.com/gohugoio/hugo) | Theme is [MemE](https://github.com/reuixiy/hugo-theme-meme)` -}}
-                <div class="powered-by">{{ partial "utils/markdownify.html" (dict "$" $ "raw" $raw "isContent" false) }}</div>
-            {{- end }}
-
             {{- if .Site.Params.displaySiteCopyright }}
                 {{- $raw := .Site.Copyright -}}
                 <div class="site-copyright">{{ partial "utils/markdownify.html" (dict "$" $ "raw" $raw "isContent" false) }}</div>
